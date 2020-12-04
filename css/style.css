@@ -1,3 +1,71 @@
 @charset "UTF-8";
-
+/* common */
 body {background: #f3f3f3;}
+.wrap {width: 100%; box-sizing: border-box; position: relative;}
+.container {width: 95%;}
+.grid-base {height: 100%; position: relative;}
+.grid-base .grid-base-line>span {position: absolute; left: 25%; height: 100%; display: block; width: 1px; height: 100%; background-color: #999;}
+.grid-base .grid-base-line span:nth-child(2) {left: 50%;}
+.grid-base .grid-base-line span:nth-child(3) {left: 75%;}
+/* fin */
+
+/* nav */
+#nav {position: fixed; right: 2vw; top: 35vh; border: 1px solid #333; overflow: hidden; border-radius: 25px 25px; z-index: 100;}
+#nav ul {margin-top: 10px;}
+#nav ul li {width: 50px; height: 30px; margin-top: 15px; }
+#nav ul li a {font-size: 1rem; text-align: center; padding: 12px 20px; transition: .5s ease-in;}
+#nav ul li:hover a {background: #333; color: #f3f3f3;}
+/* fin */
+
+/* main */
+#main {height: 930px; position: relative;}
+
+.main-noise {display: block; width: 500px; height: 400px; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);}
+.main-noise:hover {background: url(../img/noise.png); animation: animate .5s steps(4) infinite;}
+@keyframes animate {
+    0% {background-position: 0 0;}
+    100% {background-position: 100% 100%;}
+}
+
+.main-noise .text-glitch {position: absolute; left: 55%; top: 45%; transform: translate(-55%,-45%);}
+.main-noise .text-glitch label {font-size: 10rem; font-weight: 900; letter-spacing: -3px; text-transform: uppercase;}
+label h2 {position: relative; line-height: 8rem; color: #333; z-index: 2;}
+.main-noise:hover .text-glitch label h2 {filter: blur(1px);}
+label>span {position: absolute; top: 0; left: 0; visibility: hidden;font-size: 10rem; line-height: 8rem;}
+.main-noise:hover .text-glitch label span {visibility: visible;}
+.main-noise:hover .text-glitch label span{color: rgba(255,0,188,.8); animation: glitch .3s cubic-bezier(.25,.46,.45,.94) both infinite;}
+.main-noise:hover .text-glitch label span:last-child {color: rgba(0,255,255,.8); animation: glitch .3s cubic-bezier(.25,.46,.45,.94) reverse both infinite;}
+@keyframes glitch {
+    0% {transform: translate(0);}
+    20% {transform: translate(-3px,-3px);}
+    40% {transform: translate(3px,-3px);}
+    60% {transform: translate(-3px,3px);}
+    80% {transform: translate(3px,3px);}
+    100% {transform: translate(0);}
+}
+
+.scroll>a {padding-top: 70px;}
+.scroll>a span {position: absolute; bottom: 10vh; left: 50%; width: 24px; height: 24px; margin-left: -12px; border-left: 1px solid #333; border-bottom: 1px solid #333; transform: rotate(-45deg); animation: scrolling 1.5s infinite; box-sizing: border-box;}
+@keyframes scrolling {
+    0% {transform: rotate(-45deg) translate(0,0); opacity: 0;}
+    50% {opacity: 1;}
+    100% {transform: rotate(-45deg) translate(-20px,20px); opacity: 0;}
+}
+/* fin */
+
+/* about */
+#about {height: 930px; position: relative;}
+
+.title-box {position: absolute; top: 10%; left: 4.2vw; color: #333;}
+.title-box > div {float: left; font-size: 10rem; font-weight: 900; width: 395px; overflow: hidden; text-transform: none;}
+.title-box span {float: right;}
+
+.info {width: 620px; height: 200px; position: absolute; top: 53%; left: 10%; color: #333;}
+.info h3 {font-weight: 900; margin-bottom: 20px; font-size: 1.2rem; letter-spacing: -2;}
+.info p {line-height: 2rem;}
+
+.skill {width: 620px; height: 400px; position: absolute; top: 53%; right: 10%; color: #333;}
+.skill h3 {font-weight: 900; margin-bottom: 20px; font-size: 1.2rem; letter-spacing: -2;}
+.skill ul li {margin-bottom: 10px;}
+.skill ul li span {display: block; width: 350px; height: 12px; border: 1px solid #333; margin: 0 10px;}
+/* fin */
