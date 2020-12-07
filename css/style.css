@@ -66,6 +66,69 @@ label>span {position: absolute; top: 0; left: 0; visibility: hidden;font-size: 1
 
 .skill {width: 620px; height: 400px; position: absolute; top: 53%; right: 10%; color: #333;}
 .skill h3 {font-weight: 900; margin-bottom: 20px; font-size: 1.2rem; letter-spacing: -2;}
-.skill ul li {margin-bottom: 10px;}
-.skill ul li span {display: block; width: 350px; height: 12px; border: 1px solid #333; margin: 0 10px;}
+.skill-box > p {font-size: 0.9rem;}
+.skill-box > div {border: 1px solid #333; margin: 10px;}
+.skill-box > div span {display: block; padding-right: 10px; height: 18px; line-height: 18px; box-sizing: border-box; background: #333; text-align: right; color: #f3f3f3; font-size: 0.8rem}
+.bar.stack1 span {animation: stack1 2s 1;}
+.bar.stack2 span {animation: stack2 2s 1;}
+.bar.stack3 span {animation: stack3 2s 1;}
+.bar.stack4 span {animation: stack4 2s 1;}
+.bar.stack5 span {animation: stack5 2s 1;}
+.bar.stack6 span {animation: stack6 2s 1;}
+@keyframes stack1 {
+    0% {width: 0; color: rgba(243,243,243,0);}
+    100% {width: 85%; color: rgba(243,243,243,1);}
+}
+@keyframes stack2 {
+    0% {width: 0; color: rgba(243,243,243,0);}
+    100% {width: 80%; color: rgba(243,243,243,1);}
+}
+@keyframes stack3 {
+    0% {width: 0; color: rgba(243,243,243,0);}
+    100% {width: 65%; color: rgba(243,243,243,1);}
+}
+@keyframes stack4 {
+    0% {width: 0; color: rgba(243,243,243,0);}
+    100% {width: 70%; color: rgba(243,243,243,1);}
+}
+@keyframes stack5 {
+    0% {width: 0; color: rgba(243,243,243,0);}
+    100% {width: 90%; color: rgba(243,243,243,1);}
+}
+@keyframes stack6 {
+    0% {width: 0; color: rgba(243,243,243,0);}
+    100% {width: 90%; color: rgba(243,243,243,1);}
+}
+/* fin */
+
+/* WORKS */
+#works {height: 900px; position: relative;}
+
+.title-box-2 {width: 50%; height: 450px; background: #f3f3f3; border-top: 1px solid #999; border-bottom: 1px solid #999;position: absolute; top: 0; left: 0; overflow: hidden; }
+.title-box-2 h2 {display: none;}
+.title-box-2 p {font-weight: 900; font-size: 10rem; color: #333; line-height: 450px;; animation: move 8s infinite;}
+@keyframes move {
+    0%{margin-left: -600px;}
+    60%{margin-left: -1600px;}
+    100%{margin-left: -600px;}
+}
+
+.design-box {position: absolute; top: 0; right: 0; width: 50%;}
+.design-box > div {cursor: pointer; width: 50%; height: 450px; float: left; border-top: 1px solid #999; border-bottom: 1px solid #999; position: relative; overflow: hidden;}
+.design-box .d-cont h3 {position: absolute; font-size: 2rem; font-weight: 900; color: #f3f3f3; top: 20px; left: 10px;}
+.design-box .d-cont p {position: absolute; left: 12px; top: 75px; color: #f3f3f3;}
+.design-box .d-cont span {position: absolute; bottom: 20px; left: 10px; font-size: 1.5rem; color: #f3f3f3;}
+.design-box .d-cont > div {width: 100%; height: 450px; position: relative;}
+.design-box .d-cont > div img {transition: .3s;}
+.design-box .d-cont > div .cont-bg {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); transition: .3s;}
+.design-box .d-cont:hover > div .cont-bg { background: rgba(0,0,0,0.4);}
+.design-box .d-cont:hover > div img {transform: scale(1.1);}
+
+
+
+.publishing-box {position: absolute; bottom: 0; left: 0; width: 75%;}
+.publishing-box > div {cursor: pointer; width: 33.3%; height: 450px; float: left; position: relative;}
+.publishing-box .p-cont h3 {position: absolute; font-size: 2rem; font-weight: 900; color:#f3f3f3; top: 20px; left: 10px;}
+.publishing-box .p-cont p {position: absolute; left: 12px; top: 75px; color: #f3f3f3;}
+.publishing-box .p-cont span {position: absolute; bottom: 20px; left: 10px; font-size: 1.5rem; color: #f3f3f3;}
 /* fin */
