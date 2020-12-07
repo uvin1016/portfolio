@@ -10,7 +10,7 @@ body {background: #f3f3f3;}
 /* fin */
 
 /* nav */
-#nav {position: fixed; right: 2vw; top: 35vh; border: 1px solid #333; overflow: hidden; border-radius: 25px 25px; z-index: 100;}
+#nav {position: fixed; right: 2vw; top: 37vh; border: 1px solid #333; overflow: hidden; border-radius: 25px 25px; z-index: 100;}
 #nav ul {margin-top: 10px;}
 #nav ul li {width: 50px; height: 30px; margin-top: 15px; }
 #nav ul li a {font-size: 1rem; text-align: center; padding: 12px 20px; transition: .5s ease-in;}
@@ -20,18 +20,18 @@ body {background: #f3f3f3;}
 /* main */
 #main {height: 930px; position: relative;}
 
-.main-noise {display: block; width: 500px; height: 400px; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);}
+.main-noise {display: block; width: 700px; height: 500px; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); cursor: pointer;}
 .main-noise:hover {background: url(../img/noise.png); animation: animate .5s steps(4) infinite;}
 @keyframes animate {
     0% {background-position: 0 0;}
     100% {background-position: 100% 100%;}
 }
 
-.main-noise .text-glitch {position: absolute; left: 55%; top: 45%; transform: translate(-55%,-45%);}
-.main-noise .text-glitch label {font-size: 10rem; font-weight: 900; letter-spacing: -3px; text-transform: uppercase;}
-label h2 {position: relative; line-height: 8rem; color: #333; z-index: 2;}
+.main-noise .text-glitch {position: absolute; left: 55%; top: 40%; transform: translate(-55%,-40%); }
+.main-noise .text-glitch label {font-size: 11rem; font-weight: 900; letter-spacing: -3px; text-transform: uppercase;}
+label h2 {position: relative; line-height: 9rem; color: #333; z-index: 2; cursor: pointer;}
 .main-noise:hover .text-glitch label h2 {filter: blur(1px);}
-label>span {position: absolute; top: 0; left: 0; visibility: hidden;font-size: 10rem; line-height: 8rem;}
+label>span {position: absolute; top: 0; left: 0; visibility: hidden;font-size: 11rem; line-height: 9rem;}
 .main-noise:hover .text-glitch label span {visibility: visible;}
 .main-noise:hover .text-glitch label span{color: rgba(255,0,188,.8); animation: glitch .3s cubic-bezier(.25,.46,.45,.94) both infinite;}
 .main-noise:hover .text-glitch label span:last-child {color: rgba(0,255,255,.8); animation: glitch .3s cubic-bezier(.25,.46,.45,.94) reverse both infinite;}
@@ -124,11 +124,49 @@ label>span {position: absolute; top: 0; left: 0; visibility: hidden;font-size: 1
 .design-box .d-cont:hover > div .cont-bg { background: rgba(0,0,0,0.4);}
 .design-box .d-cont:hover > div img {transform: scale(1.1);}
 
-
-
-.publishing-box {position: absolute; bottom: 0; left: 0; width: 75%;}
-.publishing-box > div {cursor: pointer; width: 33.3%; height: 450px; float: left; position: relative;}
+.publishing-box {position: absolute; bottom: 0; left: 2px; width: 75%;}
+.publishing-box > div {cursor: pointer; width: 33.3%; height: 450px; float: left; position: relative; overflow: hidden;}
 .publishing-box .p-cont h3 {position: absolute; font-size: 2rem; font-weight: 900; color:#f3f3f3; top: 20px; left: 10px;}
 .publishing-box .p-cont p {position: absolute; left: 12px; top: 75px; color: #f3f3f3;}
 .publishing-box .p-cont span {position: absolute; bottom: 20px; left: 10px; font-size: 1.5rem; color: #f3f3f3;}
+.publishing-box .p-cont > div {width: 100%; height: 450px; position: relative;}
+.publishing-box .p-cont > div img {transition: .3s;}
+.publishing-box .p-cont > div .cont-bg {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); transition: .3s;}
+.publishing-box .p-cont:hover > div .cont-bg { background: rgba(0,0,0,0.4);}
+.publishing-box .p-cont:hover > div img {transform: scale(1.1);}
+/* fin */
+
+/* CONTACT */
+#contact {height: 850px; position: relative;}
+
+#contact .title-box-3 {position: absolute; top: 0; right: 0; width: 75%; height: 450px; background: url(../img/noise-2.png); animation: animate .5s steps(4) infinite;}
+@keyframes animate {
+    0% {background-position: 0 0;}
+    100% {background-position: 100% 100%;}
+}
+
+.title-box-3 .text-glitch {position: absolute; left: 35%; top: 45%; transform: translate(-55%,-45%);}
+.title-box-3 .text-glitch label {font-size: 10rem; font-weight: 900; letter-spacing: -3px; }
+.title-box-3 .text-glitch > label h2 {position: relative; line-height: 8rem; color: #f3f3f3; z-index: 2; filter: blur(1px);}
+.title-box-3 .text-glitch > label > span {position: absolute; visibility: visible;top: 0; left: 0; font-size: 10rem; line-height: 8rem;color: rgba(255,0,188,.8); animation: glitch .3s cubic-bezier(.25,.46,.45,.94) both infinite;}
+.title-box-3 .text-glitch label span:last-child {color: rgba(0,255,255,.8); animation: glitch .3s cubic-bezier(.25,.46,.45,.94) reverse both infinite; }
+@keyframes glitch {
+    0% {transform: translate(0);}
+    20% {transform: translate(-3px,-3px);}
+    40% {transform: translate(3px,-3px);}
+    60% {transform: translate(-3px,3px);}
+    80% {transform: translate(3px,3px);}
+    100% {transform: translate(0);}
+}
+
+.cont-info {position: absolute; left: 0; bottom: 0; width: 75%; height: 400px; background: #333;}
+.info-box {margin: 3% 0 0 47%;}
+.info-box > div {color: #f3f3f3; float: left; padding: 20px;}
+.info-box > div h3 {font-weight: 900; font-size: 2rem; padding-bottom: 20px;}
+.info-box > div a {font-weight: normal; font-size: 1rem; }
+/* fin */
+
+/* footer */
+#footer {height: 50px;}
+#footer .copy p {text-align: center; line-height: 50px;}
 /* fin */
