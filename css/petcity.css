@@ -1,0 +1,54 @@
+@charset "UTF-8";
+/* common */
+body {background: #f3f3f3;}
+.wrap {width: 100%; box-sizing: border-box;}
+.container {width: 95%; margin: 0 auto;}
+.grid-base {height: 100%; position: relative;}
+.grid-base .grid-base-line>span {position: absolute; left: 25%; height: 100%; display: block; width: 1px; height: 100%; background-color: #999;}
+.grid-base .grid-base-line span:nth-child(2) {left: 50%;}
+.grid-base .grid-base-line span:nth-child(3) {left: 75%;}
+/* fin */
+
+/* main */
+#main {width: 100%; height: 900px; position: relative;}
+
+.text-glitch {position: absolute; left: 42%; top: 45%; transform: translate(-50%,-45%);}
+.text-glitch label {font-size: 10rem; font-weight: 900; letter-spacing: -3px; }
+.text-glitch > label h2 {position: relative; line-height: 8rem; color: #333; z-index: 2; filter: blur(1px);}
+.text-glitch > label > span {position: absolute; visibility: visible;top: 0; left: 0; font-size: 10rem; line-height: 8rem;color: rgba(255,0,188,.8); animation: glitch .3s cubic-bezier(.25,.46,.45,.94) both infinite;}
+.text-glitch label span:last-child {color: rgba(0,255,255,.8); animation: glitch .3s cubic-bezier(.25,.46,.45,.94) reverse both infinite; }
+@keyframes glitch {
+    0% {transform: translate(0);}
+    20% {transform: translate(-3px,-3px);}
+    40% {transform: translate(3px,-3px);}
+    60% {transform: translate(-3px,3px);}
+    80% {transform: translate(3px,3px);}
+    100% {transform: translate(0);}
+}
+
+.veiw {position: absolute; left: 32%; bottom: 30%; transform: translate(-50%,-45%);}
+.veiw button {width: 10vw; height: 5vh; text-align: center; line-height: 4.8vh; font-size: 1rem; cursor: pointer; transition: .5s; border: 1px solid #999;}
+.veiw button:hover {background: #0fa8ff; border: 1px solid #0fa8ff;}
+
+.scroll>a {padding-top: 70px; text-align: center;}
+.scroll>a p {position: absolute; bottom: 3vh; left: 50%; transform: translateX(-50%);}
+.scroll>a span {position: absolute; bottom: 10vh; left: 50%; width: 24px; height: 24px; margin-left: -12px; border-left: 1px solid #333; border-bottom: 1px solid #333; transform: rotate(-45deg); animation: scrolling 1.5s infinite; box-sizing: border-box;}
+@keyframes scrolling {
+    0% {transform: rotate(-45deg) translate(0,0); opacity: 0;}
+    50% {opacity: 1;}
+    100% {transform: rotate(-45deg) translate(-20px,20px); opacity: 0;}
+}
+
+/* fin */
+
+/* info */
+#info {width: 100%; height: 8100px; position: relative; overflow: hidden;}
+
+.about {width: 100%; position: absolute; top: 0; left: 0;}
+.about h2 {width: 1920px; line-height: 7rem; border-top: 1px solid #999; border-bottom: 1px solid #999; background: #f3f3f3; margin: 0 auto; text-align: center;font-size: 3rem; font-weight: 900; color: #333; }
+/* fin */
+
+/* footer */
+#footer {height: 50px; border-top: 1px solid #999;}
+#footer .copy p {text-align: center; line-height: 50px;}
+/* fin */

@@ -2,7 +2,7 @@
 /* common */
 body {background: #f3f3f3;}
 .wrap {width: 100%; box-sizing: border-box; position: relative;}
-.container {width: 95%;}
+.container {width: 95%; margin: 0 auto;}
 .grid-base {height: 100%; position: relative;}
 .grid-base .grid-base-line>span {position: absolute; left: 25%; height: 100%; display: block; width: 1px; height: 100%; background-color: #999;}
 .grid-base .grid-base-line span:nth-child(2) {left: 50%;}
@@ -126,7 +126,7 @@ label>span {position: absolute; top: 0; left: 0; visibility: hidden;font-size: 1
 .design-box .d-cont:hover > div .cont-bg { background: rgba(0,0,0,0.4);}
 .design-box .d-cont:hover > div img {transform: scale(1.2);}
 
-.publishing-box {position: absolute; bottom: 0; left: 2px; width: 75%;}
+.publishing-box {position: absolute; bottom: 0; left: 1px; width: 75%;}
 .publishing-box > div {cursor: pointer; width: 33.3%; height: 470px; float: left; position: relative; overflow: hidden;}
 .publishing-box .p-cont h3 {position: absolute; font-size: 2rem; font-weight: 900; color:#f3f3f3; top: 20px; left: 10px;}
 .publishing-box .p-cont p {position: absolute; left: 12px; top: 75px; color: #f3f3f3;}
@@ -172,3 +172,4 @@ label>span {position: absolute; top: 0; left: 0; visibility: hidden;font-size: 1
 #footer {height: 50px; border-top: 1px solid #999;}
 #footer .copy p {text-align: center; line-height: 50px;}
 /* fin */
+
