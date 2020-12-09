@@ -140,7 +140,7 @@ label>span {position: absolute; top: 0; left: 0; visibility: hidden;font-size: 1
 /* fin */
 
 /* CONTACT */
-#contact {height: 890px; position: relative;}
+#contact {height: 880px; position: relative;}
 
 #contact .title-box-3 {position: absolute; top: 0; right: 0; width: 75%; height: 450px; background: url(../img/noise-2.png); animation: animate .5s steps(4) infinite;}
 @keyframes animate {
