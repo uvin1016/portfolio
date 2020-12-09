@@ -10,10 +10,8 @@ body {background: #f3f3f3;}
 /* fin */
 
 /* nav */
-#nav {position: fixed; right: 2vw; top: 37vh; border: 1px solid #333; background: #f3f3f3; color: #333; overflow: hidden; border-radius: 25px 25px; z-index: 100;}
-#nav ul {margin-top: 10px;}
-#nav ul li {width: 50px; height: 30px; margin-top: 15px; }
-#nav ul li a {font-size: 1rem; text-align: center; padding: 12px 20px; transition: .5s ease-in;}
+#nav {position: fixed; right: 2vw; top: 38vh; border: 1px solid #333; background: #f3f3f3; color: #333; overflow: hidden; border-radius: 25px 25px; z-index: 100;}
+#nav ul li a {display: block; margin: 0 auto; font-size: 1rem; text-align: center; padding: 18px 18px;; transition: .5s ease-in;}
 #nav ul li:hover a {background: #333; color: #f3f3f3;}
 #nav ul li.on a {background: #333; color: #f3f3f3;}
 /* fin */
@@ -70,13 +68,20 @@ label>span {position: absolute; top: 0; left: 0; visibility: hidden;font-size: 1
 .skill h3 {font-weight: 900; margin-bottom: 20px; font-size: 1.2rem; letter-spacing: -2;}
 .skill-box > p {font-size: 0.9rem; line-height: 1.3rem; float: left;}
 .skill-box > div {width: 500px; border: 1px solid #333; margin: 0 90px 20px;}
-.skill-box > div span {display: block; padding-right: 10px; height: 18px; line-height: 18px; box-sizing: border-box; background: #333; text-align: right; color: #f3f3f3; font-size: 0.8rem}
-.bar.stack1 span {animation: stack1 2s 1;}
-.bar.stack2 span {animation: stack2 2s 1;}
-.bar.stack3 span {animation: stack3 2s 1;}
-.bar.stack4 span {animation: stack4 2s 1;}
-.bar.stack5 span {animation: stack5 2s 1;}
-.bar.stack6 span {animation: stack6 2s 1;}
+.skill-box > div span {width: 0; display: block;  height: 18px; line-height: 18px; box-sizing: border-box; background: #333; text-align: right; color: #f3f3f3; font-size: 0.8rem;}
+.skill-box > div span b {margin-right: 10px; opacity: 0;}
+.skill.aos-animate .skill-box > div span b {animation: stack-txt 1s 2s forwards;}
+.skill.aos-animate .bar.stack1 span {animation: stack1 2s 1.5s forwards;}
+.skill.aos-animate .bar.stack2 span {animation: stack2 2s 1.5s forwards;}
+.skill.aos-animate .bar.stack3 span {animation: stack3 2s 1.5s forwards;}
+.skill.aos-animate .bar.stack4 span {animation: stack4 2s 1.5s forwards;}
+.skill.aos-animate .bar.stack5 span {animation: stack5 2s 1.5s forwards;}
+.skill.aos-animate .bar.stack6 span {animation: stack6 2s 1.5s forwards;}
+@keyframes stack-txt {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
 @keyframes stack1 {
     0% {width: 0; color: rgba(243,243,243,0);}
     100% {width: 85%; color: rgba(243,243,243,1);}
@@ -106,14 +111,10 @@ label>span {position: absolute; top: 0; left: 0; visibility: hidden;font-size: 1
 /* WORKS */
 #works {height: 940px; position: relative;}
 
-.title-box-2 {width: 50%; height: 470px; background: #f3f3f3; border-top: 1px solid #999; border-bottom: 1px solid #999;position: absolute; top: 0; left: 0; overflow: hidden; }
+.title-box-2 {width: 50%; height: 470px; border-top: 1px solid #999; border-bottom: 1px solid #999; position: absolute; top: 0; left: 0; overflow: hidden;}
+.title-box-2 .slider {width: 1920px;}
 .title-box-2 h2 {display: none;}
-.title-box-2 p {font-weight: 900; font-size: 10rem; color: #333; line-height: 450px;; animation: move 8s infinite;}
-@keyframes move {
-    0%{margin-left: -600px;}
-    60%{margin-left: -1600px;}
-    100%{margin-left: -600px;}
-}
+.title-box-2>.slider>li {display: block; width: 640px; float: left; font-weight: 900; font-size: 10.7rem; color: #333; line-height: 450px; }
 
 .design-box {position: absolute; top: 0; right: 0; width: 50%;}
 .design-box > div {cursor: pointer; width: 50%; height: 470px; float: left; border-top: 1px solid #999; border-bottom: 1px solid #999; position: relative; overflow: hidden;}
