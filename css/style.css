@@ -12,8 +12,9 @@ body {background: #f3f3f3;}
 /* nav */
 #nav {position: fixed; right: 2vw; top: 38vh; border: 1px solid #333; background: #f3f3f3; color: #333; overflow: hidden; border-radius: 25px 25px; z-index: 100;}
 #nav ul li a {display: block; margin: 0 auto; font-size: 1rem; text-align: center; padding: 18px 18px;; transition: .5s ease-in;}
-#nav ul li:hover a {background: #333; color: #f3f3f3;}
+/* #nav ul li:hover a {} */
 #nav ul li.on a {background: #333; color: #f3f3f3;}
+/* #nav ul li.active a {background: url(../img/nav-main.jpg); font-weight: 900;} */
 /* fin */
 
 /* main */
@@ -111,10 +112,15 @@ label>span {position: absolute; top: 0; left: 0; visibility: hidden;font-size: 1
 /* WORKS */
 #works {height: 940px; position: relative;}
 
-.title-box-2 {width: 50%; height: 470px; border-top: 1px solid #999; border-bottom: 1px solid #999; position: absolute; top: 0; left: 0; overflow: hidden;}
-.title-box-2 .slider {width: 1920px;}
+.title-box-2 {width: 50%; height: 470px; position: absolute; top: 0; left: 0; overflow: hidden;}
+.title-box-2 .slider {width: 200%;  display: flex; flex-wrap: nowrap; animation: rotate 2s linear infinite;}
+@keyframes rotate {
+    0% {transform: translate(0%);}
+    100% {transform: translate(-50%);}
+}
 .title-box-2 h2 {display: none;}
-.title-box-2>.slider>li {display: block; width: 640px; float: left; font-weight: 900; font-size: 10.7rem; color: #333; line-height: 450px; }
+.title-box-2>.slider>li { display: block; width: 100%; margin: 0 20px; float: left; font-weight: 900; font-size: 10.7rem; color: #333; line-height: 450px; }
+
 
 .design-box {position: absolute; top: 0; right: 0; width: 50%;}
 .design-box > div {cursor: pointer; width: 50%; height: 470px; float: left; border-top: 1px solid #999; border-bottom: 1px solid #999; position: relative; overflow: hidden;}
@@ -172,5 +178,30 @@ label>span {position: absolute; top: 0; left: 0; visibility: hidden;font-size: 1
 /* footer */
 #footer {height: 50px; border-top: 1px solid #999;}
 #footer .copy p {text-align: center; line-height: 50px;}
+/* fin */
+
+/* popup */
+
+/* pop common */
+.pop-bg {position: fixed; top: 0; left: 0; background: rgba(0,0,0,0.8); width: 100%; height: 100%; z-index: 100; }
+.pop-cont {position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 60vw; height: 70vh; background: #f3f3f3; z-index: 100;}
+.pop-cont .elm {float: left; width: 70%; height: 100%;}
+.pop-cont .navi {float: right; width: 30%; height: 100%;}
+
+.navi .close {width: 100%; height: 50px;}
+.navi .close i {cursor: pointer; font-size: 1.5rem; color: #333; float: right; padding: 0 20px; line-height: 50px;}
+
+.navi .pop-text h3 {font-size: 4.5rem; text-align: center; font-weight: 900; margin: 150px 0 40px; color: #333;}
+.navi .pop-text p {font-size: 0.9rem; text-align: center; margin-top: 10px; color: #333;}
+
+.navi .veiw {margin: 80px auto; display: block; width: 100px; height: 40px; border: 1px solid #999; text-align: center; line-height: 40px; color: #333; transition: .4s;cursor: pointer;}
+.navi .veiw:hover {border: 1px solid #333; background: #333; color: #f3f3f3;}
+/* pop common fin */
+
+/* petcity pop */
+.popup1 {display: none; }
+.popup1 .pop-cont .elm {overflow: hidden; overflow-y: auto;}
+.popup1 .pop-cont .elm img {width: 100%;}
+
 /* fin */
 
