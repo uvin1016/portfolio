@@ -55,10 +55,40 @@ $(document).ready(function(){
 
 });
 
-//팝업창
-$('.d-cont').click(function(){
+// 팝업창
+// 펫시티
+$('.d01').click(function(){
     $('.popup1').fadeIn();
 });
 $('.close').click(function(){
     $('.popup1').fadeOut();
 });
+// 상세페이지
+$('.d02').click(function(){
+    $('.popup2').fadeIn();
+});
+$('.close').click(function(){
+    $('.popup2').fadeOut();
+});
+// 삼성제약
+$('.p01').click(function(){
+    $('.popup3').fadeIn();
+});
+$('.close').click(function(){
+    $('.popup3').fadeOut();
+});
+// 곰표
+$('.p02').click(function(){
+    $('.popup4').fadeIn();
+});
+$('.close').click(function(){
+    $('.popup4').fadeOut();
+});
+// 핀딧
+$('.p03').click(function(){
+    $('.popup5').fadeIn();
+});
+$('.close').click(function(){
+    $('.popup5').fadeOut();
+});
+
