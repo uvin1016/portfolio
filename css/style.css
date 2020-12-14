@@ -185,25 +185,28 @@ label>span {position: absolute; top: 0; left: 0; visibility: hidden;font-size: 1
 /* pop common */
 .modal {display: none;}
 .pop-bg {position: fixed; top: 0; left: 0; background: rgba(0,0,0,0.8); width: 100%; height: 100%; z-index: 100; }
-.pop-cont {position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 60vw; height: 64vh; background: #f3f3f3; z-index: 100;}
+.pop-cont {position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 70vw; height: 73vh; background: #f3f3f3; z-index: 100;}
 .pop-cont .elm {float: left; width: 70%; height: 100%;}
 .pop-cont .navi {float: right; width: 30%; height: 100%;}
 
+.navi {position: relative;}
 .navi .close {width: 100%; height: 50px;}
 .navi .close i {cursor: pointer; font-size: 1.5rem; color: #333; float: right; padding: 0 20px; line-height: 50px;}
 
 .navi .pop-text h3 {font-size: 4.5rem; text-align: center; font-weight: 900; margin: 150px 0 40px; color: #333;}
 .navi .pop-text p {font-size: 0.9rem; text-align: center; margin-top: 10px; color: #333;}
 
-.navi .veiw {margin: 80px auto; display: block; width: 100px; height: 40px; border: 1px solid #999; text-align: center; line-height: 40px; color: #333; transition: .4s;cursor: pointer;}
+.navi .veiw {margin: 80px auto 0; display: block; width: 100px; height: 40px; border: 1px solid #999; text-align: center; line-height: 40px; color: #333; transition: .4s;cursor: pointer;}
 .navi .veiw:hover {border: 1px solid #333; background: #333; color: #f3f3f3;}
 
 .swiper-container {width: 100%; height: 100%; position: relative;}
 .swiper-slide {text-align: center; font-size: 18px; background: #f2f2f2; display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex;-webkit-box-pack: center; -ms-flex-pack: center;-webkit-justify-content: center;justify-content: center; -webkit-box-align: center; -ms-flex-align: center;-webkit-align-items: center; align-items: center;}
 .swiper-slide img {width: 100%;}
 .swiper-button-next, .swiper-button-prev {margin: 30% 3%; color: #333; width:20px;}
-.swiper-pagination {width: 70px; height: 30px; position: absolute; bottom: 3%; left: 50%; transform: translateX(-50%); z-index: 10;}
+.swiper-pagination {width: 70px; height: 30px; position: absolute; bottom: 1%; left: 50%; transform: translateX(-50%); z-index: 10;}
 
+.navi .github {position: absolute; bottom: 20%; left: 50%; transform: translateX(-50%); display: block; width: 300px; height: 40px; display: block; border: 1px solid #999; text-align: center; line-height: 40px; color: #333; transition: .4s;cursor: pointer;}
+.navi .github:hover {border: 1px solid #333; background: #333; color: #f3f3f3;}
 /* pop common fin */
 
 /* petcity pop */
@@ -216,10 +219,10 @@ label>span {position: absolute; top: 0; left: 0; visibility: hidden;font-size: 1
 .popup2 .pop-cont .navi .pop-text h3 {font-size: 4rem;text-transform: uppercase;}
 
 /* 핀딧 */
-.popup5 .pop-cont .navi .veiw {float: left; margin: 20px 0 0 45px;}
+.popup5 .pop-cont .navi .veiw {float: left; margin: 20px 0 0 65px;}
 .popup5 .swiper-button-prev {color: #f3f3f3;}
 .popup5 .swiper-button-next {color: #f3f3f3;}
-.popup5 .swiper-pagination {color: #f3f3f3; bottom: 1%;}
+.popup5 .swiper-pagination {color: #f3f3f3;}
 .popup5 .pop-cont .navi .pop-text {margin-bottom: 40px;}
 .popup5 .pop-cont .navi .pop-text h3 {margin-top: 100px;}
 /* fin */

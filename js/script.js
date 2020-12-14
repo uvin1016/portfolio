@@ -1,5 +1,10 @@
 AOS.init();
 
+// 새로고침시 처음으로 이동
+window.onbeforeunload = function () {
+    window.scrollTo(0,0);
+};
+
 // 마우스 휠 풀페이지 이동
 var win_h = $(window).height(); // 윈도우 창의 높이 값을 설정함
 $('.moving').each(function(index){ // .moving 의 순서마다 각각 실행
