@@ -2,7 +2,7 @@
 /* common */
 body {background: #f3f3f3;}
 .wrap {width: 100%; box-sizing: border-box; position: relative;}
-.container {width: 95%; margin: 0 auto;}
+.container {width: 95%; height: 100%; margin: 0 auto;}
 .grid-base {height: 100%; position: relative;}
 .grid-base .grid-base-line>span {position: absolute; left: 25%; height: 100%; display: block; width: 1px; height: 100%; background-color: #999;}
 .grid-base .grid-base-line span:nth-child(2) {left: 50%;}
@@ -27,14 +27,14 @@ body {background: #f3f3f3;}
     100% {background-position: 100% 100%;}
 }
 
-.main-noise .text-glitch {position: absolute; left: 55%; top: 40%; transform: translate(-55%,-40%); }
-.main-noise .text-glitch label {font-size: 11rem; font-weight: 900; letter-spacing: -3px; text-transform: uppercase;}
-label h2 {position: relative; line-height: 9rem; color: #333; z-index: 2; cursor: pointer;}
-.main-noise:hover .text-glitch label h2 {filter: blur(1px);}
-label>span {position: absolute; top: 0; left: 0; visibility: hidden;font-size: 11rem; line-height: 9rem;}
-.main-noise:hover .text-glitch label span {visibility: visible;}
-.main-noise:hover .text-glitch label span{color: rgba(255,0,188,.8); animation: glitch .3s cubic-bezier(.25,.46,.45,.94) both infinite;}
-.main-noise:hover .text-glitch label span:last-child {color: rgba(0,255,255,.8); animation: glitch .3s cubic-bezier(.25,.46,.45,.94) reverse both infinite;}
+.main-noise .text-glitch {position: absolute; left: 55%; top: 40%; transform: translate(-55%,-40%); font-size: 11rem; font-weight: 900; letter-spacing: -3px; text-transform: uppercase;}
+.main-noise .text-glitch h2 {display: none;}
+.main-noise .text-glitch p {position: relative; line-height: 9rem; color: #333; z-index: 2; cursor: pointer;}
+.main-noise:hover .text-glitch p {filter: blur(1px);}
+.main-noise .text-glitch>span {position: absolute; top: 0; left: 0; visibility: hidden;font-size: 11rem; line-height: 9rem;}
+.main-noise:hover .text-glitch span {visibility: visible;}
+.main-noise:hover .text-glitch span{color: rgba(255,0,188,.8); animation: glitch .3s cubic-bezier(.25,.46,.45,.94) both infinite;}
+.main-noise:hover .text-glitch span:last-child {color: rgba(0,255,255,.8); animation: glitch .3s cubic-bezier(.25,.46,.45,.94) reverse both infinite;}
 @keyframes glitch {
     0% {transform: translate(0);}
     20% {transform: translate(-3px,-3px);}
@@ -62,11 +62,11 @@ label>span {position: absolute; top: 0; left: 0; visibility: hidden;font-size: 1
 .title-box span {float: right;}
 
 .info {width: 620px; height: 200px; position: absolute; top: 53%; left: 10%; color: #333;}
-.info h3 {font-weight: 900; margin-bottom: 20px; font-size: 1.2rem; letter-spacing: -2;}
+.info h3 {font-weight: 900; margin-bottom: 20px; font-size: 1.2rem;}
 .info p {line-height: 2rem;}
 
 .skill {width: 620px; height: 400px; position: absolute; top: 47%; right: 11%; color: #333;}
-.skill h3 {font-weight: 900; margin-bottom: 20px; font-size: 1.2rem; letter-spacing: -2;}
+.skill h3 {font-weight: 900; margin-bottom: 20px; font-size: 1.2rem;}
 .skill-box > p {font-size: 0.9rem; line-height: 1.3rem; float: left;}
 .skill-box > div {width: 500px; border: 1px solid #333; margin: 0 90px 20px;}
 .skill-box > div span {width: 0; display: block;  height: 18px; line-height: 18px; box-sizing: border-box; background: #333; text-align: right; color: #f3f3f3; font-size: 0.8rem;}
@@ -122,7 +122,7 @@ label>span {position: absolute; top: 0; left: 0; visibility: hidden;font-size: 1
 .title-box-2>.slider>li { display: block; width: 100%; margin: 0 20px; float: left; font-weight: 900; font-size: 10.7rem; color: #333; line-height: 450px; }
 
 
-.design-box {position: absolute; top: 0; right: 0; width: 50%;}
+.design-box {position: absolute; top: 0; right: 0;}
 .design-box > div {cursor: pointer; width: 50%; height: 470px; float: left; border-top: 1px solid #999; border-bottom: 1px solid #999; position: relative; overflow: hidden;}
 .design-box .d-cont h3 {position: absolute; font-size: 2rem; font-weight: 900; color: #f3f3f3; top: 20px; left: 10px;}
 .design-box .d-cont p {position: absolute; left: 12px; top: 75px; color: #f3f3f3;}
@@ -133,7 +133,7 @@ label>span {position: absolute; top: 0; left: 0; visibility: hidden;font-size: 1
 .design-box .d-cont:hover > div .cont-bg { background: rgba(0,0,0,0.4);}
 .design-box .d-cont:hover > div img {transform: scale(1.2);}
 
-.publishing-box {position: absolute; bottom: 0; left: 1px; width: 75%;}
+.publishing-box {position: absolute; bottom: 0; left: 0;}
 .publishing-box > div {cursor: pointer; width: 33.3%; height: 470px; float: left; position: relative; overflow: hidden;}
 .publishing-box .p-cont h3 {position: absolute; font-size: 2rem; font-weight: 900; color:#f3f3f3; top: 20px; left: 10px;}
 .publishing-box .p-cont p {position: absolute; left: 12px; top: 75px; color: #f3f3f3;}
@@ -155,10 +155,11 @@ label>span {position: absolute; top: 0; left: 0; visibility: hidden;font-size: 1
 }
 
 .title-box-3 .text-glitch {position: absolute; left: 35%; top: 45%; transform: translate(-55%,-45%);}
-.title-box-3 .text-glitch label {font-size: 10rem; font-weight: 900; letter-spacing: -3px; }
-.title-box-3 .text-glitch > label h2 {position: relative; line-height: 8rem; color: #f3f3f3; z-index: 2; filter: blur(1px);}
-.title-box-3 .text-glitch > label > span {position: absolute; visibility: visible;top: 0; left: 0; font-size: 10rem; line-height: 8rem;color: rgba(255,0,188,.8); animation: glitch .3s cubic-bezier(.25,.46,.45,.94) both infinite;}
-.title-box-3 .text-glitch label span:last-child {color: rgba(0,255,255,.8); animation: glitch .3s cubic-bezier(.25,.46,.45,.94) reverse both infinite; }
+.title-box-3 .text-glitch h2 {display: none;}
+.title-box-3 .text-glitch {font-size: 10rem; font-weight: 900; letter-spacing: -3px; }
+.title-box-3 .text-glitch p {position: relative; line-height: 8rem; color: #f3f3f3; z-index: 2; filter: blur(1px);}
+.title-box-3 .text-glitch > span {position: absolute; visibility: visible;top: 0; left: 0; font-size: 10rem; line-height: 8rem;color: rgba(255,0,188,.8); animation: glitch .3s cubic-bezier(.25,.46,.45,.94) both infinite;}
+.title-box-3 .text-glitch span:last-child {color: rgba(0,255,255,.8); animation: glitch .3s cubic-bezier(.25,.46,.45,.94) reverse both infinite; }
 @keyframes glitch {
     0% {transform: translate(0);}
     20% {transform: translate(-3px,-3px);}
