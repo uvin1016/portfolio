@@ -2,7 +2,7 @@
 /* common */
 body {background: #f3f3f3;}
 .wrap {width: 100%; box-sizing: border-box; position: relative;}
-.container {width: 95%; height: 100%; margin: 0 auto;}
+.container {width: 95%; margin: 0 auto;}
 .grid-base {height: 100%; position: relative;}
 .grid-base .grid-base-line>span {position: absolute; left: 25%; height: 100%; display: block; width: 1px; height: 100%; background-color: #999;}
 .grid-base .grid-base-line span:nth-child(2) {left: 50%;}
