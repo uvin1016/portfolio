@@ -206,7 +206,7 @@ body {background: #f3f3f3;}
 .swiper-button-next, .swiper-button-prev {margin: 30% 3%; color: #333; width:20px;}
 .swiper-pagination {width: 70px; height: 30px; position: absolute; bottom: 1%; left: 50%; transform: translateX(-50%); z-index: 10;}
 
-.navi .github {position: absolute; bottom: 20%; left: 50%; transform: translateX(-50%); display: block; width: 300px; height: 40px; display: block; border: 1px solid #999; text-align: center; line-height: 40px; color: #333; transition: .4s;cursor: pointer;}
+.navi .github {position: absolute; bottom: 22%; left: 50%; transform: translateX(-50%); display: block; width: 100px; height: 40px; display: block; border: 1px solid #999; text-align: center; line-height: 40px; color: #333; transition: .4s;cursor: pointer;}
 .navi .github:hover {border: 1px solid #333; background: #333; color: #f3f3f3;}
 /* pop common fin */
 
@@ -219,6 +219,10 @@ body {background: #f3f3f3;}
 .popup2 .pop-cont .elm img {width: 100%;}
 .popup2 .pop-cont .navi .pop-text h3 {font-size: 4rem;text-transform: uppercase;}
 
+/* 곰표 */
+.popup4 .pop-cont .navi .pop-text h3 {margin-top: 130px;}
+/* fin */
+
 /* 핀딧 */
 .popup5 .pop-cont .navi .veiw {float: left; margin: 20px 0 0 65px;}
 .popup5 .swiper-button-prev {color: #f3f3f3;}
@@ -226,5 +230,6 @@ body {background: #f3f3f3;}
 .popup5 .swiper-pagination {color: #f3f3f3;}
 .popup5 .pop-cont .navi .pop-text {margin-bottom: 40px;}
 .popup5 .pop-cont .navi .pop-text h3 {margin-top: 100px;}
+.popup5 .pop-cont .navi .github {width: 270px;}
 /* fin */
 
