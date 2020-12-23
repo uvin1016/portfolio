@@ -39,15 +39,26 @@ $(document).ready(function(){
         });
     });
 
+    // 햄버거 버튼 클릭시 네비 등장
+    $('.hamburger').on('click', function(){
+        if($(this).hasClass('active')){
+            $('.hamburger').removeClass('active')
+            $('#nav').fadeOut();
+        }else{
+            $('.hamburger').addClass('active');
+            $('#nav').fadeIn();
+        }
+        return false;
+    });
+
     // 스크롤 움직임에 따라 네비버튼 색변화
     var $menu = $('#nav ul li');
     var $contents = $('section');
 
     $(window).scroll(function(){
         var sclTop = $(window).scrollTop();
-
         $contents.each(function(){
-            if(Math.floor($(this).offset().top) < sclTop){
+            if($(this).offset().top < sclTop){
                 var idx = $(this).index();
                 $menu.removeClass('on');
                 $menu.eq(idx).addClass('on');
